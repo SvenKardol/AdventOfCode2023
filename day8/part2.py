@@ -43,11 +43,7 @@ for i in range(len(start_rooms)):
     # avoid first interval since it might not be the length of a full loop
     cycles.append((cycle_search[i][2] - cycle_search[i][1]))
 
-lcm = 1
-for i in cycles:
-    lcm = math.lcm(lcm, i)
-
-print(lcm)
+print(math.lcm(*cycles))
 
 # factorization of loop cycles
 # 1, 53, 307, 16271
