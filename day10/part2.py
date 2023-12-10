@@ -113,6 +113,8 @@ cleared_data = remove_junk(data, position_dict)
 #  .FJ.L7.
 #  .L---J.
 # Dot in the middle is in the loop, because F is in front. J doesn't cause a loop crossing as seen here.
+# Code works as well if you use all the bottom closed options : L, |, and J.
+# Just not when using both at the same time.
 in_loop = 0
 for y in range(len(cleared_data)):
     loop_crossings = 0
