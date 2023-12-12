@@ -9,7 +9,7 @@ data = dataRaw.split("\n")
 @cache
 def find_possible_configurations(s, size_current_spring, springs_to_be_found):
     # End of string, check if there are no springs or that the current spring covers the last spring
-    if not s:
+    if len(s) == 0:
         # No springs to be found and current spring is empty.
         if size_current_spring == 0 and len(springs_to_be_found) == 0:
             return 1
