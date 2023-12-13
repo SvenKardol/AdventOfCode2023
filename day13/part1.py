@@ -1,4 +1,5 @@
 from aocd import get_data
+
 dataRaw = get_data(year=2023, day=13)
 
 data = dataRaw.split("\n\n")
@@ -6,12 +7,12 @@ data = dataRaw.split("\n\n")
 
 def find_reflection(lines):
     for i in range(1, len(lines[0])):
-        diff_to_edge = min(i, len(lines[0])-i)
+        diff_to_edge = min(i, len(lines[0]) - i)
 
         mirrored = True
         for line in lines:
-            first_part = line[i-diff_to_edge:i]
-            second_part = list(line[i:i+diff_to_edge])
+            first_part = line[i - diff_to_edge:i]
+            second_part = list(line[i:i + diff_to_edge])
             second_part.reverse()
             second_part = ''.join(second_part)
 
