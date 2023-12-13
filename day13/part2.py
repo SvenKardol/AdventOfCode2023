@@ -1,5 +1,4 @@
 from aocd import get_data
-from functools import cache
 
 dataRaw = get_data(year=2023, day=13)
 data = dataRaw.split("\n\n")
